@@ -1,30 +1,21 @@
-const common = require('./webpack.common')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { merge } = require('webpack-merge')
+const path = require('path')
 
-module.exports = {
-    mode: 'production',
-    entry: `${common.paths.src}/index.tsx`,
-    output: common.output,
-    devtool: 'source-map',
-    optimization: {
-      usedExports: true,
-      emitOnErrors: true,
-    },
-    performance: {
-      hints: false,
-      maxEntrypointSize: 512000,
-      maxAssetSize: 512000
-  },
-    module: common.moduleConfig,
-    plugins: [new HtmlWebpackPlugin({
-      template: '/Users/zomaish/projects/blog/template.ejs'
-    })],
-    devServer: {
-        static: {
-            publicPath: `http://localhost:${common.devPort}/assets`,
-        },
-        open: true,
-        hot: true,
-        port: common.devPort
-    }
+const common = require('../../webpack.common')
+
+const paths = {
+  assets: path.resolve(__dirname, '../dist/assets'), 
+  src: path.resolve(__dirname, '../src'),
+  htmlTemplate: path.resolve(__dirname, '../template.ejs')
+}
+
+module.exports = merge(common(paths), {
+  mode: 'production',
+  entry: `${paths.src}/index.tsx`,
+  devtool: 'source-map',
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
   }
+})

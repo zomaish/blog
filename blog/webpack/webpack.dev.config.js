@@ -1,26 +1,24 @@
-const common = require('./webpack.common')
+const { merge } = require('webpack-merge')
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = {
-    mode: 'development',
-    entry: `${common.paths.src}/index.tsx`,
-    output: common.output,
-    devtool: 'inline-source-map',
-    optimization: {
-      usedExports: true,
-      emitOnErrors: true,
+const common = require('../../webpack.common')
+
+const paths = {
+  assets: path.resolve(__dirname, '../dist/assets'), 
+  src: path.resolve(__dirname, '../src'),
+  htmlTemplate: path.resolve(__dirname, '../template.ejs')
+}
+
+module.exports = merge(common(paths), {
+  mode: 'development',
+  entry: `${paths.src}/index.tsx`,
+  devtool: 'inline-source-map',
+  devServer: {
+    static: {
+      publicPath: `http://localhost:${common.devPort}/assets`,
     },
-    module: common.moduleConfig,
-    plugins: [new HtmlWebpackPlugin({
-        template: path.join(__dirname, '../template.ejs')
-    })],
-    devServer: {
-        static: {
-            publicPath: `http://localhost:${common.devPort}/assets`,
-        },
-        open: true,
-        hot: true,
-        port: common.devPort
-    }
+    open: true,
+    hot: true,
+    port: 8080
   }
+})
