@@ -1,18 +1,24 @@
-const common = require('./webpack.common')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const { merge } = require('webpack-merge')
+const path = require('path')
 
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const common = require('../../webpack.common')
 
+const paths = {
+  assets: path.resolve(__dirname, '../dist/assets'), 
+  src: path.resolve(__dirname, '../src')
+}
 
-module.exports = {
-    mode: 'production',
-    entry: `${common.paths.src}/index.tsx`,
-    stats: {
-        children: true
-    },
-    module: common.moduleConfig,
-    optimization: {
-        usedExports: true,
-      },
-    plugins: [
-    new BundleAnalyzerPlugin()],
-  }
+module.exports = merge(common(paths), {
+  mode: 'production',
+  entry: `${paths.src}/index.tsx`,
+  stats: {
+    children: true
+  },
+  optimization: {
+    usedExports: true,
+  },
+  plugins: [
+    new BundleAnalyzerPlugin()
+  ]
+})
