@@ -1,0 +1,19 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging /Users/zomaish/play-scala-grpc-example/target/scala-2.12/play-scala-grpc-example_2.12-1.0-SNAPSHOT-sources.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	logback.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/zomaish/play-scala-grpc-example/conf/logback.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	selfsigned.keystore[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/zomaish/play-scala-grpc-example/conf/selfsigned.keystore[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Module.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/zomaish/play-scala-grpc-example/app/Module.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	helloworld.proto[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/zomaish/play-scala-grpc-example/app/protobuf/helloworld.proto[0m
+[0m[[0m[0mdebug[0m] [0m[0m	application.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/zomaish/play-scala-grpc-example/conf/application.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	routers/HelloWorldRouter.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/zomaish/play-scala-grpc-example/app/routers/HelloWorldRouter.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	routes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/zomaish/play-scala-grpc-example/conf/routes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/HomeController.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/zomaish/play-scala-grpc-example/app/controllers/HomeController.scala[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

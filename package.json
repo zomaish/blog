@@ -1,0 +1,17 @@
+{
+    "private": true,
+    "workspaces": ["blog", "components", "lint"],
+    "dependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.17.9",
+        "@babel/plugin-transform-react-jsx-source": "^7.16.7",
+        "@babel/preset-env": "^7.16.11",
+        "@babel/preset-react": "^7.16.7",
+        "@babel/preset-typescript": "^7.16.7",
+        "@types/react": "^18.0.5",
+        "@types/react-dom": "^18.0.1"
+    }
+  }

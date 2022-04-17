@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jetty-alpn-agent-2.0.9">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/universal/stage/jetty-alpn-agent/jetty-alpn-agent-2.0.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

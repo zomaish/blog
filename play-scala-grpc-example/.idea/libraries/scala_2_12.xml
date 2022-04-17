@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="scala-2.12">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/scala-2.12/play-scala-grpc-example_2.12-1.0-SNAPSHOT-web-assets.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/scala-2.12/play-scala-grpc-example_2.12-1.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/scala-2.12/play-scala-grpc-example_2.12-1.0-SNAPSHOT-sans-externalized.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/scala-2.12/play-scala-grpc-example_2.12-1.0-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/scala-2.12/play-scala-grpc-example_2.12-1.0-SNAPSHOT-javadoc.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
