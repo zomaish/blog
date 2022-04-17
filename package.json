@@ -1,5 +1,5 @@
 {
-    "name": "project",
+    "name": "myworkspace",
     "version": "0.1.0",
     "private": true,
     "workspaces": ["blog", "components", "lint"],
