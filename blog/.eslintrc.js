@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   extends: [require.resolve('lint')],
   "settings": {
@@ -8,6 +10,11 @@ module.exports = {
     }
   },
   rules: {
-    "import/no-extraneous-dependencies": ["error", {"packageDir": '../'}]
+    "import/no-extraneous-dependencies": ["error", {
+      "packageDir": [
+        './',
+        '../',
+        path.resolve(__dirname, '../components'),
+    ]}]
   }
 }

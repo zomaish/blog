@@ -1,19 +1,21 @@
 import React from 'react'
-import { NavLink } from "react-router-dom"
+import { NavLink } from 'react-router-dom'
 
 require('./Header.scss')
 
-const Header = () =>
+const Header = () => (
   <nav>
-    <div className="componentHeader component-header-logo">Zaid Emeish</div>
+    <div className="component-header component-header-logo">Zaid Emeish</div>
     <ul>
       <li>
-      <NavLink to='/'>Blog</NavLink></li>
+        <NavLink to="/">Blog</NavLink>
+      </li>
     </ul>
     <div className="common-header-controls">
       <div>theme</div>
-      <div><NavLink to='/login'>Login</NavLink></div>
+      <div><NavLink to="/login">Login</NavLink></div>
     </div>
   </nav>
+)
 
 export default Header

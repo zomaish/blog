@@ -5,9 +5,6 @@
   "description": "My Blog",
   "author": "Zaid Emeish",
   "sideEffects": false,
-  "dependencies": {
-    "components": "0.1.0"
-  },
   "types": "./declarations.d.ts",
   "scripts": {
     "dev": "NODE_OPTIONS=--max-old-space-size=4096 webpack-dev-server --config webpack/webpack.dev.config.js",
@@ -33,5 +30,8 @@
     "webpack-dev-server": "^4.8.1",
     "webpack-visualizer-plugin": "^0.1.11",
     "lint": "*"
+  },
+  "peerDependencies": {
+    "components": "*"
   }
 }
