@@ -1,10 +1,10 @@
-import React, {lazy, Suspense} from 'react'
+import React, { lazy, Suspense } from 'react'
 
-const Header  = lazy(() => import('Components/src/header/Header'))
+const Header = lazy(() => import('Components/src/header/Header'))
 
-const Home = () => 
+const Home = () => (
   <Suspense fallback={<div>Loading...</div>}>
     <Header />
-  </Suspense>
+  </Suspense>)
 
 export default Home
