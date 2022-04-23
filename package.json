@@ -21,6 +21,7 @@
     "@types/react": "^18.0.5",
     "@types/react-dom": "^18.0.1",
     "css-loader": "^6.7.1",
+    "eslint-import-resolver-webpack": "^0.13.2",
     "node-sass": "^7.0.1",
     "postcss": "^8.4.12",
     "postcss-dart-sass": "^1.0.0",

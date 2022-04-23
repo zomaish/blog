@@ -15,7 +15,7 @@ module.exports = merge(common(paths), {
   devtool: 'source-map',
   resolve: {
     alias: {
-      Components: path.resolve(__dirname, '../../components')
+      components: path.resolve(__dirname, '../../components')
     },
     extensions: ['.tsx', '.ts', '.scss', '.js']
   },
