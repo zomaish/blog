@@ -30,7 +30,6 @@ module.exports = {
     "react/jsx-wrap-multilines": [2, {"declaration": "parens"}],
     'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
     'comma-dangle': [1, 'never'],
-    'import/no-extraneous-dependencies': ['error', { packageDir: ['../'] }],
     semi: [2, 'never'],
     'react/jsx-closing-bracket-location': [1, 'after-props'],
     'import/prefer-default-export': 0,
