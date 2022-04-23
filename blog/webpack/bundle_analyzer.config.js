@@ -15,8 +15,15 @@ module.exports = merge(common(paths), {
   stats: {
     children: true
   },
+  resolve: {
+    alias: {
+      Components: path.resolve(__dirname, '../../components')
+    },
+    extensions: ['.tsx', '.ts', '.scss', '.js']
+  },
   optimization: {
     usedExports: true,
+    runtimeChunk: 'single',
   },
   plugins: [
     new BundleAnalyzerPlugin()

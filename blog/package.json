@@ -8,9 +8,10 @@
   "dependencies": {
     "components": "0.1.0"
   },
+  "types": "./declarations.d.ts",
   "scripts": {
     "dev": "NODE_OPTIONS=--max-old-space-size=4096 webpack-dev-server --config webpack/webpack.dev.config.js",
-    "prod": "NODE_OPTIONS=--max-old-space-size=4096 webpack-dev-server --config webpack/webpack.prod.config.js",
+    "prod": "NODE_OPTIONS=--max-old-space-size=4096 webpack --config webpack/webpack.prod.config.js",
     "analyze": "webpack --config webpack/bundle_analyzer.config.js",
     "typecheck": "tsc --noEmit",
     "eslint": "eslint --max-warnings 0 \"**/*.{ts,tsx, js}\"",
