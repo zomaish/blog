@@ -1,13 +1,9 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = (paths) => {
   const plugins = [
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css',
-    })
-]
+    require('postcss-dart-sass')
+  ]
   if (paths.htmlTemplate) {
     plugins.unshift(
       new HtmlWebpackPlugin({
@@ -50,12 +46,12 @@ module.exports = (paths) => {
           use: [
             'style-loader',
             'css-loader',
-            'resolve-url-loader',
+            // 'resolve-url-loader',
             {
               loader: 'sass-loader',
               options: {
                 // Prefer `dart-sass`
-                implementation: require('sass'),
+                implementation: require("sass"),
                 sassOptions: {
                   fiber: false,
                   outputStyle: 'compressed',

@@ -13,6 +13,12 @@ module.exports = merge(common(paths), {
   mode: 'production',
   entry: `${paths.src}/index.tsx`,
   devtool: 'source-map',
+  resolve: {
+    alias: {
+      Components: path.resolve(__dirname, '../../components')
+    },
+    extensions: ['.tsx', '.ts', '.scss', '.js']
+  },
   performance: {
     hints: false,
     maxEntrypointSize: 512000,

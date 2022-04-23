@@ -9,15 +9,27 @@ const paths = {
   htmlTemplate: path.resolve(__dirname, '../template.ejs')
 }
 
+
 module.exports = merge(common(paths), {
   mode: 'development',
-  entry: `${paths.src}/index.tsx`,
+  entry: {
+    index: `${paths.src}/index.tsx`
+  },
   devtool: 'inline-source-map',
+  resolve: {
+    alias: {
+      Components: path.resolve(__dirname, '../../components')
+    },
+    extensions: ['.tsx', '.ts', '.scss', '.js']
+  },
   devServer: {
     static: {
       publicPath: `http://localhost:${common.devPort}/assets`,
     },
-    open: true,
+    client: {
+      logging: 'info',
+    },
+    historyApiFallback: true,
     hot: true,
     port: 8080
   }
